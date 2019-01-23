@@ -1,10 +1,14 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./resources/css/app.css";
+import { firebase } from "./firebase";
 
-ReactDOM.render(<App />, document.getElementById('root'));
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
+
+firebase.auth().onAuthStateChanged(user => {
+  ReactDOM.render(<App user={user} />, document.getElementById("root"));
+});
 
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
