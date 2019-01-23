@@ -3,10 +3,12 @@ import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 import Layout from "./Hoc/Layout";
 import Home from "./component/home";
+import TheTeam from "./component/TheTeam";
 import Error from "./component/404";
 import SignIn from "./component/auth/Signin";
 import Dashboard from "./component/auth/Dashboard";
 import Matches from "./component/auth/Matches";
+import TheMatches from "./component/thematches";
 import addEditMatch from "./component/auth/addEditMatch";
 import AdminPlayers from "./component/auth/Players";
 import addEditPlayers from "./component/auth/addEditPlayers";
@@ -21,6 +23,8 @@ class App extends Component {
           <Switch>
             <Route exact component={Home} path="/" />
             <Route exact component={SignIn} path="/signin" />
+            <Route exact component={TheTeam} path="/the_team" />
+            <Route exact component={TheMatches} path="/the_matches" />
             <Route exact component={Error} />
           </Switch>
         );
@@ -31,6 +35,9 @@ class App extends Component {
             <Route exact component={Dashboard} path="/dashboard" />
             <Route exact component={Matches} path="/admin_matches" />
             <Route exact component={AdminPlayers} path="/admin_players" />
+            <Route exact component={TheTeam} path="/the_team" />
+            <Route exact component={TheMatches} path="/the_matches" />
+
             <Route
               exact
               component={addEditPlayers}

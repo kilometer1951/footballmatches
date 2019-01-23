@@ -8,8 +8,7 @@ const Footer = () => {
         <CityLogo width="70px" height="70px" />
       </div>
       <div className="footer_discl">
-        Manchester city 2018.All rights reserved Powered By Serge Shalo
-        #Kilometer.
+        Manchester city 2018.All rights reserved Powered By Serge Shalo.
       </div>
     </footer>
   );
